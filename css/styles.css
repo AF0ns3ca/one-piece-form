@@ -16,7 +16,7 @@
     
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 280px){
     :root{
         --h1-font-size: 2.5rem;
         --span-font-size: 1.75rem;
@@ -84,7 +84,10 @@ nav{
 }
 
 .hero-container{
-    background: url(../assets/imgs/wallpaper.jpg) center center/cover no-repeat;
+    background: url(../assets/imgs/wallpaper.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 80vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     position: relative;

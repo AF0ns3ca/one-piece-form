@@ -30,7 +30,7 @@
         <img src="./assets/imgs/banner.png" alt="" />
       </div>
     </div>
-    <form id="form">
+    <form id="form" action="./templates/envioCorrecto.html">
         <fieldset class="formulario">
             <legend><img src="./assets/imgs/piece.png" alt="">¿Quieres convertirte en Shichibukai? <img src="./assets/imgs/piece.png" alt=""></legend>
             <label for="nombre">Introduce tu nombre, Nakama</label>
@@ -43,7 +43,7 @@
             <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Yo voy a ser el Rey de los Piratas..."></textarea>
             <input type="submit" value="Enviar" id="enviar"/>
         </fieldset>
-        
+        <ul class="errores" id="errores"></ul>
     </form>
 
     <footer>
