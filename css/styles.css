@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Pirata+One&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --h1-font-size: 6rem;
+    --span-font-size: 3.5rem;
+    --input-size: 20.75rem;
+    --h1-color: #ffffff;
+    --span-color: #ffffff;
+    --button-color: #ffffff;
+    
+}
+
+@media screen and (max-width: 540px){
+    :root{
+        --h1-font-size: 2.5rem;
+        --span-font-size: 1.75rem;
+        --input-size: 10.8rem;
+    }
+}
+
+.nav-container{
+    height: 8vh;
+    align-items: center;
+    font-family: 'Pirata One', system-ui;
+    font-size: x-large;
+
+}
+
+.nav-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-body__logo{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-body__logo img{
+    width: 80px;
+    margin-left: 40px;
+}
+
+.nav-body__logo h1{
+    font-size: 3rem;
+    margin-left: 10px;
+    color: rgb(13, 84, 106);
+}
+
+.nav-body__menu{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-body__menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+.hero-container{
+    background: url(../assets/imgs/wallpaper.jpg) center center/cover no-repeat;
+    height: 80vh;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    position: relative;
+}
+
+.hero-container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.55;
+}
+
+.hero-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+img{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: 20%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+img:hover{
+    transform: scale(1.1);
+}
+
+label{
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 1rem;
+    font-family: 'Pirata One', system-ui;
+    
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+legend{
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    font-family: 'Pirata One', system-ui;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+legend img{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+fieldset{
+    border-radius: 0.5rem;
+    border: 0.2px solid #000000;
+}
+
+
+
+.formulario{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;  
+}
+
+input{
+    width: var(--input-size);
+    height: 3.5rem;
+    border-radius: 0.5rem;
+    border: 0.5px solid #000000;
+    padding-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+textarea{
+    border-radius: 0.5rem;
+    border: 0.5px solid #000000;
+    padding-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: rgb(13, 84, 106);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(25, 163, 205, 0.8);
+}
+
+footer{
+    font-size: larger;
+}
+
+.footer-container{
+    margin: 20px 0 0 0;
+    background-color: #000000;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: 'Pirata One', system-ui;
+}
+
+.footer-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-body__logo{
+    width: 10%;
+
+}
+
+.footer-body__logo img{
+    width: 100%;
+}
+
+.footer-body__social{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
