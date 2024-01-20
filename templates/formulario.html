@@ -8,20 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="form" action="envioCorrecto.html">
+    <form id="form" action="../index.html" method="get">
         <fieldset class="formulario">
-            <legend><img src="../assets/imgs/piece.png" alt="">¿Quieres convertirte en Shichibukai? <img src="../assets/imgs/piece.png" alt=""></legend>
-            <label for="nombre">Introduce tu nombre, Nakama</label>
+            <legend><a href="../index.html"><img src="../assets/imgs/piece.png" alt=""></a>¿Quieres convertirte en Shichibukai?<a href="../index.html"><img src="../assets/imgs/piece.png" alt=""></a></legend>
+            <label for="nombre">Di tu nombre, Nakama</label>
             <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
             <label for="apellidos">El Gobierno Mundial quiere saber tus apellidos</label>
             <input type="text" name="apellidos" id="apellidos" placeholder="Introduce tus apellidos..."/>
+            <label for="telefono">Ten a mano tu Den Den Mushi</label>
+            <input type="text" name="telefono" id="telefono" placeholder="Introduce tu telefono..."/>
             <label for="email">El Dr. Vegapunk quiere enviarte un correo electronico</label>
-            <input type="email" name="email" id="email" placeholder="Introduce correo electronico..."/>
+            <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
             <label for="mensaje">¿Cual es tu sueño, pirata?</label>
             <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Yo voy a ser el Rey de los Piratas..."></textarea>
             <input type="submit" value="Enviar" id="enviar"/>
         </fieldset>
         <ul class="errores" id="errores"></ul>
     </form>
+
+    <script src="../js/main.js"></script>
 </body>
 </html>

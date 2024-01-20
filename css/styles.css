@@ -138,6 +138,8 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
 }
 
@@ -253,4 +255,10 @@ footer{
     justify-content: center;
     align-items: center;
     gap: 1rem;
+}
+
+.error{
+    color: red;
+    font-size: 1rem;
+    font-family: 'Pirata One', system-ui;
 }
