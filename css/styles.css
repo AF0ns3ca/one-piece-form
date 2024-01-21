@@ -24,64 +24,107 @@
     }
 }
 
-nav{
-    width: 100%;
-}
-
-.nav-container{
-    height: 8vh;
-    align-items: center;
-    font-family: 'Pirata One', system-ui;
-    font-size: x-large;
-
-}
-
-.nav-body{
-    width: 100%;
+header{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ececec;
+}
+
+.logo{
+    max-width: 5rem;
+    max-height: 5rem;
+
+}
+
+.nav-list{
+    display: flex;
+    list-style-type: none;
     gap: 1rem;
 }
 
-.nav-body__logo{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
-}
-
-.nav-body__logo img{
-    width: 80px;
-    margin-left: 40px;
-}
-
-.nav-body__logo h1{
-    font-size: 3rem;
-    margin-left: 0.625rem;
-    color: rgb(13, 84, 106);
-}
-
-.nav-body__menu{
-    /* Tenemos que hacer que este menu ocupe todo el ancho y alto del contenedor */
-    width: 60%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
-    
-}
-
-.nav-body__menu ul{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+.nav-list li a{
     text-decoration: none;
-    list-style: none;
+    color: #1c1c1c;
+    font-size: 1.5rem;
+    font-family: 'Pirata One', system-ui;
 }
+
+.abrir-menu, .cerrar-menu{
+    display: none;
+
+}
+
+@media screen and (max-width:650px){
+    .abrir-menu, .cerrar-menu{
+        display: block;
+        cursor: pointer;
+        border: none;
+        font-size: 2.5rem;
+        background-color: transparent;
+    }
+
+    .abrir-menu{
+        color: #1c1c1c;
+    }
+
+    .abrir-menu:hover{
+        /*Hacemos que sea mas grande cuando se ponga el cursor encima y con una animacion de 2seg*/
+        transform: scale(1.2);
+        
+    }
+
+    .cerrar-menu{
+        color: #ececec;
+    }
+
+    .cerrar-menu:hover{
+        /*Hacemos que sea mas grande cuando se ponga el cursor encima y con una animacion de 2seg*/
+        transform: scale(1.2);
+        
+    }
+
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+    
+    }
+
+    .nav{
+        width: 12rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list{
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a{
+        text-decoration: none;
+        color: #ececec;
+        font-family: 'Pirata One', system-ui;
+    }
+}
+
+
 
 .hero-container{
     background: url(../assets/imgs/wallpaper.jpg);
@@ -91,6 +134,7 @@ nav{
     height: 80vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     position: relative;
+    
 }
 
 .hero-container::before{
@@ -111,7 +155,7 @@ nav{
     height: 100%;
 }
 
-nav img, .hero-container img{
+.hero-container img{
     padding: 10px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255, 0.8);
@@ -120,7 +164,7 @@ nav img, .hero-container img{
     transition: all 0.3s ease;
 }
 
-nav img:hover, .hero-container img:hover{
+.hero-container img:hover{
     transform: scale(1.1);
 }
 
@@ -163,9 +207,24 @@ legend img{
     margin-right: 10px;
 }
 
+.wrapper{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: #FFFAFA;
+    /*Le añadimos una sombra*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
 fieldset{
     border-radius: 0.5rem;
-    border: 0.2px solid #000000;
+    /* border: 0.2px solid #000000; */
+    border: none;
+    
 }
 
 
@@ -200,7 +259,7 @@ textarea{
 }
 
 input[type="submit"]{
-    width: 100%;
+    width: 70%;
     background-color: rgb(13, 84, 106);
     color: #ffffff;
     font-size: 1.5rem;
@@ -208,12 +267,28 @@ input[type="submit"]{
     cursor: pointer;
     margin-right: 0;
     margin-left: 0;
-    margin-bottom: 0;
-
+    margin-bottom: .5rem;
 }
 
 input[type="submit"]:hover{
     background-color: rgb(25, 163, 205, 0.8);
+}
+
+.volver-btn{
+    width: 70%;
+    background-color: rgb(106, 13, 13);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: .5rem;
+
+}
+
+.volver-btn:hover{
+    background-color: rgb(205, 25, 25, 0.8);
 }
 
 
@@ -314,4 +389,8 @@ footer{
     color: red;
     font-size: 1rem;
     font-family: 'Pirata One', system-ui;
+}
+
+.container{
+    width: 100%; 
 }

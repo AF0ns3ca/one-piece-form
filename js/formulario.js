@@ -6,6 +6,7 @@ const apellidos = document.querySelector('#apellidos');
 const telefono = document.querySelector('#telefono');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const volver = document.querySelector('.volver-btn');
 
 let mensajesErrores = 0;
 
@@ -72,9 +73,16 @@ const limpiarCampos = () => {
     mensaje.classList.contains('error') && (mensaje.value = "", mensaje.classList.remove('error'));
 }
 
+    
+  
+
+volver.addEventListener('click', () => {
+    window.location.href = "../index.html";
+})
 nombre.addEventListener('click', quitarError)
 apellidos.addEventListener('click', quitarError)
 telefono.addEventListener('click', quitarError)
 email.addEventListener('click', quitarError)
 mensaje.addEventListener('click', quitarError)
 formulario.addEventListener('submit', validar)
+
