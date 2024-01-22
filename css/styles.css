@@ -18,6 +18,7 @@
 
 :root {
   --h1-font-size: 6rem;
+  --h2-font-size: 4rem;
   --span-font-size: 3.5rem;
   --input-size: 20.75rem;
   --p-size: 2.5rem;
@@ -34,6 +35,7 @@
 @media screen and (max-width: 768px) {
   :root {
     --h1-font-size: 5rem;
+    --h2-font-size: 3rem;
     --span-font-size: 1.5rem;
     --input-size: 18.75rem;
     --p-size: 2rem;
@@ -44,6 +46,7 @@
 @media screen and (max-width: 280px) {
   :root {
     --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
     --span-font-size: 1.75rem;
     --input-size: 10.8rem;
     --p-size: 1.5rem;
@@ -244,8 +247,8 @@ header {
   background-color: #ffffff;
 }
 
-.content h1 {
-  font-size: var(--h1-font-size);
+.content h2 {
+  font-size: var(--h2-font-size);
   color: #000000;
   font-family: "Pirata One", system-ui;
   text-align: center;
@@ -256,6 +259,32 @@ header {
   color: #000000;
   font-family: "Pirata One", system-ui;
   text-align: center;
+}
+
+.video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 3rem 3rem 3rem;
+  background-color: #ffffff;
+}
+
+/*Media query que haga que se ponga en columna si la resolucion baja de 1000 px*/
+@media screen and (max-width: 1400px) {
+  .content-container {
+    flex-direction: column;
+  }
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
 /*Footer*/
