@@ -9,13 +9,16 @@
     <title>One Piece</title>
   </head>
   <body>
+    <div class="container">
       <header>
-        <img class="logo" src="./assets/imgs/piece.png" alt="logo">
+        <div class="header-logo">
+          <img class="logo" src="../assets/imgs/piece.png" alt="logo">
+          <h1>One Piece</h1>
+      </div>
         <button id="abrir-menu" class="abrir-menu">&#9776;</button>
         <nav id="nav" class="nav">
           <button id="cerrar-menu" class="cerrar-menu">✕</button>
           <ul class="nav-list">
-            <li><a href="#">Inicio</a></li>
             <li><a href="./templates/personajes.html">Personajes</a></li>
             <li><a href="https://inmanga.com/ver/manga/One-Piece/dfc7ecb5-e9b3-4aa5-a61b-a498993cd935">Manga</a></li>
             <li><a href="https://www3.animeflv.net/anime/one-piece-tv">Anime</a></li>
@@ -27,18 +30,54 @@
         <div class="hero-container">
           <div class="hero-body">
             <img src="./assets/imgs/banner.png" alt="" />
+            <span>"You want my treasure, you can have it. I left everything I gathered together in one place. Now, you just have to find it." - Gold Roger</span>
           </div>
         </div>
+
+        <div class="content-container">
+          <div class="content">
+            <h1>¡Comienza la Gran Era de los Piratas!</h1>
+            <p>Riqueza, fama, poder. Gold Roger, el Rey de los Piratas, logró todo lo que este mundo tiene para ofrecer. Y así, muchos hombres se dirigen a Grand Line para encontrar el gran tesoro que dejó atrás, el One Piece. ¡El mundo ha entrado verdaderamente en una Gran Era Pirata! ¡Con el sombrero de paja que le dio el gran pirata Shanks, Monkey D. Luffy se dirige al mar en un viaje para convertirse en el Rey de los Piratas!</p>
+          </div>
+        </div>
+        
+
         <footer>
           <div class="footer-container">
               <div class="footer-body">
-                  <div class="footer-body__text">
-                  <p>One Piece &copy; 1997 by Eiichiro Oda</p>
-                  <p>Alvaro Fonseca Hernández</p>
+                <div class="footer-sections">
+                  <div class="footer-servicios">
+                    <h3>Servicios</h3>
+                    <ul>
+                      <li><a href="./templates/personajes.html">Personajes</a></li>
+                      <li><a href="https://inmanga.com/ver/manga/One-Piece/dfc7ecb5-e9b3-4aa5-a61b-a498993cd935">Manga</a></li>
+                      <li><a href="https://www3.animeflv.net/anime/one-piece-tv">Anime</a></li>
+                    </ul>
                   </div>
-              </div>
+                  <div class="footer-about">
+                    <h3>Sobre Nosotros</h3>
+                    <ul>
+                      <li><a href="#">Contacto</a></li>
+                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#">Terminos y Condiciones</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer-company">
+                    <h3>Nuestra Compañia</h3>
+                    <p>
+                      Lo que comenzó como un pequeño proyecto web y un grupo de amigos, se convirtió en una de las mejores páginas de anime y manga en el mundo.
+                    </p>
+                  </div>
+                </div>
+                <div class="footer-author">
+                  <p>One Piece &copy; 1997 by Eiichiro Oda</p>
+                  <p>Álvaro Fonseca Hernández</p>
+                </div>
+            </div>
           </div>
-      </footer>     
+      </footer>    
+    </div>
+       
     
     <script src="./js/hamburguer.js"></script>
   </body>

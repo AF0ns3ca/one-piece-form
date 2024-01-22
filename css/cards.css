@@ -1,0 +1,409 @@
+/*Cards*/
+
+.container-personajes {
+  width: 100%;
+  height: 100%;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.boxesContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 9rem 3rem 3rem 3rem;
+}
+
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.5%;
+}
+
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  background: #222;
+  cursor: default;
+  height: 700px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: var(--card-width);
+  height: var(--card-height);
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+}
+
+.card .front {
+  width: var(--card-width);
+  height: var(--card-height);
+}
+
+.card .back {
+  width: var(--card-width);
+  height: var(--card-height);
+  transform: rotateY(180deg);
+  overflow-y: scroll;
+  font-family: "Pirata One", system-ui;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back h3 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: "Rye", serif;
+}
+
+.back img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.back p {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  font-family: "Pirata One", system-ui;
+}
+
+.personaje-logo {
+  width: 7.5rem;
+  height: 7rem;
+}
+
+.info-btn a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Pirata One", system-ui;
+}
+
+.info-btn {
+  width: 70%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.card .back::-webkit-scrollbar {
+  width: 0;
+}
+
+.card .back::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.card .back::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.luffy .front {
+  background: url(../assets/imgs/luffyWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.luffy .back {
+  background-color: #a90000;
+}
+
+.luffy .info-btn {
+  background-color: #0549a5;
+  color: #dfd500;
+}
+
+.luffy .info-btn:hover {
+  background-color: #0d3773;
+}
+
+.zoro .front {
+  background: url(../assets/imgs/zoroWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.zoro .back {
+  background-color: #3c4f37;
+}
+
+.zoro .info-btn {
+  background-color: #000000;
+  color: #875e5e;
+}
+
+.zoro .info-btn:hover {
+  background-color: #2b2b2b;
+}
+
+.nami .front {
+  background: url(../assets/imgs/namiWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.nami .back {
+  /* background-color: 	#ff9615; */
+  background-color: #dd8112;
+}
+
+.nami .info-btn {
+  background-color: #7151a5;
+  color: #2e89b4;
+}
+
+.nami .info-btn:hover {
+  background-color: #4f3a7b;
+}
+
+.sanji .front {
+  background: url(../assets/imgs/sanjiWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sanji .back {
+  background-color: #2b68a0;
+}
+
+.sanji .info-btn {
+  background-color: #af8911;
+  color: #921a1a;
+}
+
+.sanji .info-btn:hover {
+  background-color: #7a5f0e;
+}
+
+.brook .front {
+  background: url(../assets/imgs/brookWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.brook .back {
+  background-color: #222;
+}
+
+.brook .info-btn {
+  background-color: #b97fdd;
+  color: #fed54b;
+}
+
+.brook .info-btn:hover {
+  background-color: #a46cc9;
+}
+
+.usopp .front {
+  background: url(../assets/imgs/usoppWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.usopp .back {
+  background-color: #b89929;
+}
+
+.usopp .info-btn {
+  /* background-color: 		#695948; */
+  background-color: #677900;
+  color: #d6e2df;
+}
+
+.usopp .info-btn:hover {
+  background-color: #4f5f00;
+}
+
+.chopper .front {
+  background: url(../assets/imgs/chopperWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.chopper .back {
+  background-color: #e17b7b;
+}
+
+.chopper .info-btn {
+  background-color: #62baa2;
+  color: #ffebdb;
+}
+
+.chopper .info-btn:hover {
+  background-color: #4f8e7a;
+}
+
+.robin .front {
+  background: url(../assets/imgs/robinWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.robin .back {
+  /* background-color: 		#75008c; */
+  background-color: #5d006f;
+}
+
+.robin .info-btn {
+  background-color: #990000;
+  color: #dcc198;
+}
+
+.robin .info-btn:hover {
+  background-color: #7a0000;
+}
+
+.franky .front {
+  background: url(../assets/imgs/frankyWanted.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.franky .back {
+  /* background-color: 			#7ad8ea; */
+  background-color: #66b4c4;
+}
+
+.franky .info-btn {
+  background-color: #d34a56;
+  color: #ffffff;
+}
+
+.franky .info-btn:hover {
+  background-color: #a63a45;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+.cardBox:nth-child(5) .card {
+  -webkit-animation: giro 3s 1;
+  animation: giro 3s 1;
+}
+
+.cardBox:nth-child(6) .card {
+  -webkit-animation: giro 3.5s 1;
+  animation: giro 3.5s 1;
+}
+
+.nombre-card {
+  background-color: #0000004a;
+  margin: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY(180deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/*Media query para 1200 px*/
+@media screen and (max-width: 1350px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  /* .card {
+        height: 285px;
+      } */
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 46%;
+  }
+  /* .card {
+        height: 285px;
+      } */
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 94.5%;
+  }
+  /* .card {
+        height: 260px;
+      } */
+}

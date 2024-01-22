@@ -1,0 +1,111 @@
+label {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 1rem;
+  font-family: "Pirata One", system-ui;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-family: "Pirata One", system-ui;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+legend img {
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.wrapper {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 10px;
+}
+
+fieldset {
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.formulario {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+input {
+  width: var(--input-size);
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 0.5px solid #000000;
+  padding-left: 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+textarea {
+  width: var(--input-size);
+  border-radius: 0.5rem;
+  border: 0.5px solid #000000;
+  padding-left: 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 70%;
+  background-color: rgb(13, 84, 106);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(25, 163, 205, 0.8);
+}
+
+.volver-btn {
+  width: 70%;
+  background-color: rgb(106, 13, 13);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+
+.volver-btn:hover {
+  background-color: rgb(205, 25, 25, 0.8);
+}
