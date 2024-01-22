@@ -1,3 +1,8 @@
+/**
+ * @author Álvaro Fonseca Hernández
+ * @GitHub https://github.com/AF0ns3ca/one-piece-form.git
+ */
+
 // const $ = id => {return document.querySelector(id);}
 const formulario = document.querySelector('#form');
 const errores = document.querySelector('#errores');
