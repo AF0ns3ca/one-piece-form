@@ -19,6 +19,7 @@
 :root {
   --h1-font-size: 6rem;
   --h2-font-size: 4rem;
+  --h3-font-size: 1.5rem;
   --span-font-size: 3.5rem;
   --input-size: 20.75rem;
   --p-size: 2.5rem;
@@ -36,6 +37,7 @@
   :root {
     --h1-font-size: 5rem;
     --h2-font-size: 3rem;
+    --h3-font-size: 1.25rem;
     --span-font-size: 1.5rem;
     --input-size: 18.75rem;
     --p-size: 2rem;
@@ -47,6 +49,7 @@
   :root {
     --h1-font-size: 2.5rem;
     --h2-font-size: 1.75rem;
+    --h3-font-size: 1rem;
     --span-font-size: 1.75rem;
     --input-size: 10.8rem;
     --p-size: 1.5rem;
@@ -294,6 +297,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-size: 1.2rem;
+}
+
+footer li{
+  list-style: none;
 }
 
 .footer-container {
@@ -328,14 +336,34 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: center;
   gap: 2rem;
 }
 
 footer a {
   text-decoration: none;
+  color: darkgrey;
+  font-family: Arial, Helvetica, sans-serif
+
+}
+
+.footer-sections h3 {
+  font-size: var(--h3-font-size);
   color: #ffffff;
-  font-family: "Pirata One", system-ui;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.footer-sections p {
+  
+  color: darkgrey;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.footer-author{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Errores*/
