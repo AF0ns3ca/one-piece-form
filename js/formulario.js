@@ -21,21 +21,39 @@ const validar = (e) => {
         nombre.classList.add('error')
         mensajesErrores++
     } 
+    if(!/^[A-Z]/.test(nombre.value.trim())){
+        nombre.value = "El nombre debe comenzar por una letra mayuscula";
+        nombre.classList.add('error')
+        mensajesErrores++
+    }
+    
     if (apellidos.value.trim().length === 0 || apellidos.classList.contains('error')) {
         apellidos.value = "Apellidos es un campo obligatorio"
         apellidos.classList.add('error')
         mensajesErrores++
-    } 
+    }
+
     if (email.value.trim().length === 0 || email.classList.contains('error')) {
         email.value = "El email es un campo obligatorio"
         email.classList.add('error')
         mensajesErrores++
     } 
+    if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value.trim())) {
+        email.value = "Introduzca correctamente su email (x@x.xx)"
+        email.classList.add('error')
+        mensajesErrores++
+    } 
+    
     if (telefono.value.trim().length === 0 || telefono.classList.contains('error')) {
         telefono.value = "El telefono es un campo obligatorio"
         telefono.classList.add('error')
         mensajesErrores++
     } 
+    if (!/^[679][0-9]{8}$/.test(telefono.value.trim())) {
+        telefono.value = "El teléfono no es válido, debe contener 8 dígitos y empezar por 6, 7 u 9'"
+        telefono.classList.add('error')
+        mensajesErrores++
+    }
     if (mensaje.value.trim().length < 10 || mensaje.classList.contains('error')) {
         mensaje.value = "El mensaje es un campo obligatorio y debe tener al menos 10 caracteres"
         mensaje.classList.add('error')
@@ -80,9 +98,14 @@ volver.addEventListener('click', () => {
     window.location.href = "../index.html";
 })
 nombre.addEventListener('click', quitarError)
+nombre.addEventListener('keydown', quitarError)
 apellidos.addEventListener('click', quitarError)
+apellidos.addEventListener('keydown', quitarError)
 telefono.addEventListener('click', quitarError)
+telefono.addEventListener('keydown', quitarError)
 email.addEventListener('click', quitarError)
+email.addEventListener('keydown', quitarError)
 mensaje.addEventListener('click', quitarError)
+mensaje.addEventListener('keydown', quitarError)
 formulario.addEventListener('submit', validar)
 
