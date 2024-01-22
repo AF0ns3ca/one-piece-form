@@ -425,6 +425,23 @@ input[type="submit"]:hover{
     height: 7rem;
   }
 
+  .info-btn a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Pirata One', system-ui;
+  }
+
+  .info-btn{
+    width: 70%;
+    padding: .75rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    margin-top: 0;
+  }
+
   .card .back::-webkit-scrollbar {
     width: 0;
   }
@@ -449,6 +466,11 @@ input[type="submit"]:hover{
     background-color: #a90000;
   }
 
+  .luffy .info-btn{
+    background-color: #0549a5;
+    color: #dfd500;
+  }
+
   .zoro .front{
     background: url(../assets/imgs/zoroWanted.jpg);
     background-position: center;
@@ -460,6 +482,11 @@ input[type="submit"]:hover{
     background-color: #3c4f37;
   }
 
+  .zoro .info-btn{
+    background-color: #000000;
+    color: #875e5e;
+  }
+
   .nami .front{
     background: url(../assets/imgs/namiWanted.jpg);
     background-position: center;
@@ -468,7 +495,13 @@ input[type="submit"]:hover{
   }
 
   .nami .back{
-    background-color: 	#ff9615;
+    /* background-color: 	#ff9615; */
+    background-color: 	#dd8112;
+  }
+
+  .nami .info-btn{
+    background-color: #7151a5;
+    color: #2e89b4;
   }
 
   .sanji .front{
@@ -482,6 +515,27 @@ input[type="submit"]:hover{
     background-color: 		#2b68a0;
   }
 
+  .sanji .info-btn{
+    background-color: 	#af8911;
+    color: #921a1a;
+  }
+
+  .brook .front{
+    background: url(../assets/imgs/brookWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .brook .back{
+    background-color: 			#222;
+  }
+
+  .brook .info-btn{
+    background-color: 			#b97fdd;
+    color: #fed54b;
+  }
+
   .usopp .front{
     background: url(../assets/imgs/usoppWanted.jpg);
     background-position: center;
@@ -491,6 +545,12 @@ input[type="submit"]:hover{
 
   .usopp .back{
     background-color: 		#e0b932;
+  }
+
+  .usopp .info-btn{
+    /* background-color: 		#695948; */
+    background-color: 	#677900;
+    color: 	#d6e2df;
   }
 
   .chopper .front{
@@ -504,6 +564,11 @@ input[type="submit"]:hover{
     background-color:	#e17b7b;
   }
 
+  .chopper .info-btn{
+    background-color: 	#62baa2;
+    color: #ffebdb;
+  }
+
   .robin .front{
     background: url(../assets/imgs/robinWanted.jpg);
     background-position: center;
@@ -512,7 +577,13 @@ input[type="submit"]:hover{
   }
 
   .robin .back{
-    background-color: 		#75008c;
+    /* background-color: 		#75008c; */
+    background-color: 		#5d006f;
+  }
+
+  .robin .info-btn{
+    background-color: 		#990000;
+    color: 	#dcc198;
   }
 
   .franky .front{
@@ -523,18 +594,13 @@ input[type="submit"]:hover{
   }
 
   .franky .back{
-    background-color: 			#7ad8ea;
+    /* background-color: 			#7ad8ea; */
+    background-color: 			#66b4c4;
   }
 
-  .brook .front{
-    background: url(../assets/imgs/brookWanted.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  .brook .back{
-    background-color: 			#222;
+  .franky .info-btn{
+    background-color: 			#d34a56;
+    color: #ffffff;
   }
   
   .cardBox:nth-child(2) .card {
@@ -562,30 +628,7 @@ input[type="submit"]:hover{
     animation: giro 3.5s 1;
   }
 
-  .info-btn a{
-    text-decoration: none;
-    color: #ffffff;
-    font-family: 'Pirata One', system-ui;
-  }
-
-  .info-btn{
-    width: 70%;
-    background-color:#000000;
-    color: #ffffff;
-    padding: .75rem;
-    border-radius: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: .5rem;
-    margin-top: 0;
-  }
-  
-  .info-btn:hover{
-    background-color: #ffffff;
-    color: #000000;
-    text-shadow: 0 0 1px #000000;
-  }
+ 
 
   .nombre-card{
     background-color: #0000004a;
