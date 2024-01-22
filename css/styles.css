@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
 *, *::before, *::after{
     margin: 0;
@@ -13,6 +14,8 @@
     --h1-color: #ffffff;
     --span-color: #ffffff;
     --button-color: #ffffff;
+    --card-width: 310px;
+    --card-height: 448px;
     
 }
 
@@ -24,12 +27,39 @@
     }
 }
 
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*Header Y Boton Hamburguesa*/
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
     background-color: #ececec;
+    
+}
+
+.personajes-header{
+  position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.header-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Rye', serif;
 }
 
 .logo{
@@ -92,16 +122,17 @@ header{
     }
 
     .nav{
-        width: 12rem;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: end;
         gap: 1rem;
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: #1c1c1c;
+        background-color: rgba(0, 0, 0, 0.95);
         padding: 2rem;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
         z-index: 1;
@@ -125,7 +156,7 @@ header{
 }
 
 
-
+/*Hero-image*/
 .hero-container{
     background: url(../assets/imgs/wallpaper.jpg);
     background-position: center;
@@ -134,6 +165,7 @@ header{
     height: 80vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     position: relative;
+    
     
 }
 
@@ -153,6 +185,7 @@ header{
     justify-content: center;
     align-items: center;
     height: 100%;
+
 }
 
 .hero-container img{
@@ -168,6 +201,8 @@ header{
     transform: scale(1.1);
 }
 
+
+/*Formulario*/
 label{
     font-size: 1.5rem;
     color: #000000;
@@ -293,59 +328,337 @@ input[type="submit"]:hover{
 
 
 /*Cards*/
-
-.card-container {
-    display: grid;
-    /*Hacemos que haya una disposicion de una fila y 3 columnas que esten a la misma altura y tengan el mismo alto*/
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;    
-    align-items: center;
-    gap: 5rem;
-    padding: 20px 0;
-    margin: 2rem auto;
-    width: 80%;
-
+.boxesContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 9rem 3rem 3rem 3rem;
 }
 
-.card {
-    width: 100%;
-    height: 100%;
-    margin-right: 2rem;
-    margin-left: 2rem;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.2s ease-in-out;
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
 }
-.card:hover {
-    transform: scale(1.05);
-}
-.card-body {
+  
+  .cardBox:hover .card {
+    transform: rotateY( 180deg);
+  }
+  
+  .card {
+    background: #222;
+    cursor: default;
+    height: 700px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: var(--card-width);
+    height: var(--card-height);
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+    
+  }
+  
+  .card p {
+    margin-bottom: 1.8em;
+  }
+  
+  .card .front,
+  .card .back {
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 1.2em;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+  }
+
+  .card .front{
+    width: var(--card-width);
+    height: var(--card-height);
+
+  }
+  
+  .card .back {
+    width: var(--card-width);
+    height: var(--card-height);
+    transform: rotateY( 180deg);
+    overflow-y: scroll;
+    font-family: 'Pirata One', system-ui;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-}
-.card-body .card-title {
-    font-size: 1.5em;
-    font-weight: 600;
-}
-.card-body .card-text {
-    font-size: 16px;
-    font-weight: 300;
-}
+    align-items: center;
+  }
 
-.card img {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+  .back h3{
+    font-size: 2rem;
+    color: #ffffff;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-family: 'Rye', serif;
+  }
+
+  .back img{
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .back p{
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Pirata One', system-ui;
+  }
+
+  .personaje-logo{
+    width: 7.5rem;
+    height: 7rem;
+  }
+
+  .card .back::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .card .back::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .card .back::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
 
 
+  .luffy .front{
+    background: url(../assets/imgs/luffyWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .luffy .back{
+    background-color: #a90000;
+  }
+
+  .zoro .front{
+    background: url(../assets/imgs/zoroWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .zoro .back{
+    background-color: #3c4f37;
+  }
+
+  .nami .front{
+    background: url(../assets/imgs/namiWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nami .back{
+    background-color: 	#ff9615;
+  }
+
+  .sanji .front{
+    background: url(../assets/imgs/sanjiWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .sanji .back{
+    background-color: 		#2b68a0;
+  }
+
+  .usopp .front{
+    background: url(../assets/imgs/usoppWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .usopp .back{
+    background-color: 		#e0b932;
+  }
+
+  .chopper .front{
+    background: url(../assets/imgs/chopperWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .chopper .back{
+    background-color:	#e17b7b;
+  }
+
+  .robin .front{
+    background: url(../assets/imgs/robinWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .robin .back{
+    background-color: 		#75008c;
+  }
+
+  .franky .front{
+    background: url(../assets/imgs/frankyWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .franky .back{
+    background-color: 			#7ad8ea;
+  }
+
+  .brook .front{
+    background: url(../assets/imgs/brookWanted.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .brook .back{
+    background-color: 			#222;
+  }
+  
+  .cardBox:nth-child(2) .card {
+    -webkit-animation: giro 1.5s 1;
+    animation: giro 1.5s 1;
+  }
+  
+  .cardBox:nth-child(3) .card {
+    -webkit-animation: giro 2s 1;
+    animation: giro 2s 1;
+  }
+
+  .cardBox:nth-child(4) .card {
+    -webkit-animation: giro 2.5s 1;
+    animation: giro 2.5s 1;
+  }
+
+  .cardBox:nth-child(5) .card {
+    -webkit-animation: giro 3s 1;
+    animation: giro 3s 1;
+  }
+
+  .cardBox:nth-child(6) .card {
+    -webkit-animation: giro 3.5s 1;
+    animation: giro 3.5s 1;
+  }
+
+  .info-btn a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Pirata One', system-ui;
+  }
+
+  .info-btn{
+    width: 70%;
+    background-color:#000000;
+    color: #ffffff;
+    padding: .75rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: .5rem;
+    margin-top: 0;
+  }
+  
+  .info-btn:hover{
+    background-color: #ffffff;
+    color: #000000;
+    text-shadow: 0 0 1px #000000;
+  }
+
+  .nombre-card{
+    background-color: #0000004a;
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 10px;
+  }
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+  
+  @keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+  }
+
+  /*Media query para 1200 px*/
+  @media screen and (max-width: 1350px) {
+    .cardBox {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+    }
+    /* .card {
+      height: 285px;
+    } */
+    .cardBox:last-child {
+      margin-bottom: 3%;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .cardBox {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+    }
+    /* .card {
+      height: 285px;
+    } */
+    .cardBox:last-child {
+      margin-bottom: 3%;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cardBox {
+      width: 94.5%;
+    }
+    /* .card {
+      height: 260px;
+    } */
+  }
 
 
+/*Footer*/
 footer{
     font-size: larger;
+    /*Hacemos que este abajo del todo*/
+    width: 100%;
 }
 
 .footer-container{
@@ -385,12 +698,9 @@ footer{
     gap: 1rem;
 }
 
+/*Errores*/
 .error{
     color: red;
     font-size: 1rem;
     font-family: 'Pirata One', system-ui;
-}
-
-.container{
-    width: 100%; 
 }

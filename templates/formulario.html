@@ -8,7 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container-form">
+        <header>
+            <img class="logo" src="../assets/imgs/piece.png" alt="logo">
+            <button id="abrir-menu" class="abrir-menu">&#9776;</button>
+            <nav id="nav" class="nav">
+              <button id="cerrar-menu" class="cerrar-menu">✕</button>
+              <ul class="nav-list">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="personajes.html">Personajes</a></li>
+                <li><a href="#">Manga</a></li>
+                <li><a href="#">Anime</a></li>
+              </ul>
+            </nav>
+          </header>
         <form class="form" id="form" action="../index.html" method="get">
             <div class="wrapper">
                 <fieldset class="formulario">
@@ -33,5 +46,6 @@
     
 
     <script src="../js/formulario.js"></script>
+    <script src="../js/hamburguer.js"></script>
 </body>
 </html>
