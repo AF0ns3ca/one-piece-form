@@ -146,6 +146,7 @@ textarea {
 
 input[type="submit"] {
   width: 70%;
+  min-width: 300px;
   background-color: rgb(13, 84, 106);
   color: #ffffff;
   font-size: 1.5rem;
@@ -154,6 +155,7 @@ input[type="submit"] {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 input[type="submit"]:hover {
@@ -162,6 +164,7 @@ input[type="submit"]:hover {
 
 .volver-btn {
   width: 70%;
+  min-width: 300px;
   background-color: rgb(106, 13, 13);
   color: #ffffff;
   font-size: 1.5rem;
@@ -170,6 +173,7 @@ input[type="submit"]:hover {
   margin-right: 0;
   margin-left: 0;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .volver-btn:hover {
