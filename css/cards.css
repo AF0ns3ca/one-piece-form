@@ -18,7 +18,7 @@ hr {
   height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
@@ -181,7 +181,6 @@ hr {
 }
 
 .nami .back {
-  /* background-color: 	#ff9615; */
   background-color: #dd8112;
 }
 
@@ -246,7 +245,6 @@ hr {
 }
 
 .usopp .info-btn {
-  /* background-color: 		#695948; */
   background-color: #677900;
   color: #d6e2df;
 }
@@ -283,17 +281,16 @@ hr {
 }
 
 .robin .back {
-  /* background-color: 		#75008c; */
   background-color: #5d006f;
 }
 
 .robin .info-btn {
-  background-color: #990000;
+  background-color: #b74026;
   color: #dcc198;
 }
 
 .robin .info-btn:hover {
-  background-color: #7a0000;
+  background-color: #8f2e1c;
 }
 
 .franky .front {
@@ -304,7 +301,6 @@ hr {
 }
 
 .franky .back {
-  /* background-color: 			#7ad8ea; */
   background-color: #66b4c4;
 }
 
@@ -317,6 +313,8 @@ hr {
   background-color: #a63a45;
 }
 
+
+/*Animaciones de las cartas al cargar la pagina*/
 .cardBox:nth-child(2) .card {
   -webkit-animation: giro 1.5s 1;
   animation: giro 1.5s 1;
@@ -342,16 +340,22 @@ hr {
   animation: giro 3.5s 1;
 }
 
-.nombre-card {
-  background-color: #0000004a;
-  margin: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 10px;
+.cardBox:nth-child(7) .card {
+  -webkit-animation: giro 4s 1;
+  animation: giro 4s 1;
 }
+
+.cardBox:nth-child(8) .card {
+  -webkit-animation: giro 4.5s 1;
+  animation: giro 4.5s 1;
+}
+
+.cardBox:nth-child(9) .card {
+  -webkit-animation: giro 5s 1;
+  animation: giro 5s 1;
+}
+
+/*Keyframes de giro de las cartas*/
 @-webkit-keyframes giro {
   from {
     transform: rotateY(180deg);
@@ -370,6 +374,7 @@ hr {
   }
 }
 
+/*Media Querys*/
 /*Media query para 1200 px*/
 @media screen and (max-width: 1350px) {
   .cardBox {
@@ -377,9 +382,7 @@ hr {
     margin-top: 3%;
     width: 46%;
   }
-  /* .card {
-        height: 285px;
-      } */
+
   .cardBox:last-child {
     margin-bottom: 3%;
   }
@@ -391,9 +394,7 @@ hr {
     margin-top: 3%;
     width: 46%;
   }
-  /* .card {
-        height: 285px;
-      } */
+
   .cardBox:last-child {
     margin-bottom: 3%;
   }
@@ -403,7 +404,4 @@ hr {
   .cardBox {
     width: 94.5%;
   }
-  /* .card {
-        height: 260px;
-      } */
 }

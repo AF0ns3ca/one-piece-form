@@ -32,8 +32,6 @@
   --BottomOffset: -5px;
   --LineHeight: 5px;
   --LineColor: #0f5094;
-  /* --card-width: 370px;
-    --card-height: 518px; */
 }
 
 @media screen and (max-width: 768px) {
