@@ -18,13 +18,14 @@ hr {
   height: 100%;
   display: flex;
   flex-direction: row;
-  /*Solo permitiremos 3 cardBox por fila*/
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* gap: 3rem; */
-  gap: 1rem;
-  padding: 9rem 3rem 3rem 3rem;
+  gap: 2rem 12rem;  
+  padding-top: 9rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 .cardBox {
@@ -33,8 +34,8 @@ hr {
   margin: 1% 0 0 1%;
   perspective: 800px;
   transition: all 0.3s ease 0s;
-  /* width: var(--card-width); */
-  width: 23.5%;
+  width: var(--card-width);
+  /* width: 23.5%; */
 }
 
 .cardBox:hover .card {
@@ -381,9 +382,9 @@ hr {
 /*Media query para 1200 px*/
 @media screen and (max-width: 1350px) {
   .cardBox {
-    margin-left: 2.8%;
+    /* margin-left: 2.8%; */
     margin-top: 3%;
-    width: 46%;
+    /* width: 46%; */
   }
 
   .cardBox:last-child {
@@ -393,18 +394,12 @@ hr {
 
 @media screen and (max-width: 767px) {
   .cardBox {
-    margin-left: 2.8%;
+    /* margin-left: 2.8%; */
     margin-top: 3%;
-    width: 46%;
+    /* width: 46%; */
   }
 
   .cardBox:last-child {
     margin-bottom: 3%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .cardBox {
-    width: 94.5%;
   }
 }
