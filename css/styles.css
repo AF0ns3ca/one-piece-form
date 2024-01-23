@@ -360,11 +360,7 @@ footer li {
 }
 
 .footer-sections {
-  /*Hacemos que cada uno de los divs interiores este en fila y cada uno con su espacio*/
   width: 100%;
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 0 2rem .5rem 2rem;
@@ -416,6 +412,10 @@ footer a {
   padding: .3rem;
   background-color: #ffffff;
   border-radius: 30%;
+}
+
+.social img:hover{
+  transform: scale(1.1);
 }
 
 .author{
