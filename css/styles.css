@@ -120,6 +120,12 @@ header {
 .logo {
   max-width: 5rem;
   max-height: 5rem;
+  transition: allí 0.3s ease;
+  cursor: pointer;
+}
+
+.logo:hover{
+  transform: scale(1.1);
 }
 
 .nav-list {
