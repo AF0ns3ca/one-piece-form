@@ -29,6 +29,9 @@
   --card-width: 310px;
   --card-height: 448px;
   --img-width: 30rem;
+  --BottomOffset: -5px;
+  --LineHeight: 5px;
+  --LineColor: #0f5094;
   /* --card-width: 370px;
     --card-height: 518px; */
 }
@@ -61,7 +64,7 @@
   width: 100%;
 }
 
-/*Header Y Boton Hamburguesa*/
+/*------------------------------------ Header Y Boton Hamburguesa ------------------------------------*/
 header {
   display: flex;
   align-items: center;
@@ -97,10 +100,39 @@ header {
 }
 
 .nav-list li a {
+  position: relative;
   text-decoration: none;
   color: #1c1c1c;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-family: "Pirata One", system-ui;
+  z-index: 1;
+}
+
+.nav-list li a::before {
+  position: absolute;
+  content: "";
+  display: block;
+  z-index: -1;
+  background: var(--LineColor);
+  opacity: 0;
+  height: var(--LineHeight);
+  bottom: calc(var(--BottomOffset) + 12px);
+  width: calc(100% + (var(--LineHeight) / 2));
+  right: calc(var(--LineHeight) / -4);
+  transition: 0.4s cubic-bezier(0, 0.54, 0.52, 0.76);
+  border-radius: 2px;
+}
+
+.nav-list li a:hover {
+  /*Cambiar el color a amarillo con una transicion de medio segundo*/
+  color: 	#a90000;
+  transition: 0.5s;
+
+} 
+
+.nav-list li a:hover:before {
+  bottom: var(--BottomOffset);
+  opacity: 1;
 }
 
 .abrir-menu,
@@ -123,7 +155,6 @@ header {
   }
 
   .abrir-menu:hover {
-    /*Hacemos que sea mas grande cuando se ponga el cursor encima y con una animacion de 2seg*/
     transform: scale(1.2);
   }
 
@@ -132,7 +163,6 @@ header {
   }
 
   .cerrar-menu:hover {
-    /*Hacemos que sea mas grande cuando se ponga el cursor encima y con una animacion de 2seg*/
     transform: scale(1.2);
   }
 
@@ -175,7 +205,7 @@ header {
   }
 }
 
-/*Hero-image*/
+/*------------------------------------ Hero-image ------------------------------------*/
 .hero-container {
   background: url(../assets/imgs/wallpaper.jpg);
   background-position: center;
@@ -192,7 +222,7 @@ header {
   height: 100%;
   width: 100%;
   background-color: #000000;
-  opacity: 0.55;
+  opacity: 0.7;
 }
 
 .hero-body {
@@ -215,8 +245,7 @@ header {
 
 .hero-container img {
   padding: 10px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255, 0.8);
+  /* background-color: rgb(255, 255, 255, 0.8); */
   width: var(--img-width);
   border-radius: 10px;
   transition: all 0.3s ease;
@@ -290,7 +319,7 @@ video {
   outline: none;
 }
 
-/*Footer*/
+/*------------------------------------ Footer ------------------------------------*/
 footer {
   width: 100%;
   display: flex;
@@ -300,7 +329,7 @@ footer {
   font-size: 1.2rem;
 }
 
-footer li{
+footer li {
   list-style: none;
 }
 
@@ -333,32 +362,33 @@ footer li{
 .footer-sections {
   /*Hacemos que cada uno de los divs interiores este en fila y cada uno con su espacio*/
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 0 2rem .5rem 2rem;
   gap: 2rem;
 }
 
 footer a {
   text-decoration: none;
   color: darkgrey;
-  font-family: Arial, Helvetica, sans-serif
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-sections h3 {
   font-size: var(--h3-font-size);
   color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer-sections p {
-  
   color: darkgrey;
-  font-family: Arial, Helvetica, sans-serif
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer-author{
+.footer-author {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -366,7 +396,36 @@ footer a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Errores*/
+.footer-author img{
+  width: 25px;
+  height: 25px;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+  margin: .5rem;
+}
+
+.social img{
+  width: 40px;
+  height: 40px;
+  padding: .3rem;
+  background-color: #ffffff;
+  border-radius: 30%;
+}
+
+.author{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*------------------------------------ Errores ------------------------------------*/
 .error {
   color: red;
   font-size: 1rem;

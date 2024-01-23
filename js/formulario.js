@@ -55,7 +55,7 @@ const validar = (e) => {
         mensajesErrores++
     } 
     if (!/^[679][0-9]{8}$/.test(telefono.value.trim())) {
-        telefono.value = "El teléfono no es válido, debe contener 8 dígitos y empezar por 6, 7 u 9'"
+        telefono.value = "Debe contener 8 dígitos y empezar por 6, 7 u 9"
         telefono.classList.add('error')
         mensajesErrores++
     }

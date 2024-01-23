@@ -1,3 +1,69 @@
+@font-face {
+  font-family: "Pirata One";
+  src: url("../assets/fonts/pirata/PirataOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rye";
+  src: url("../assets/fonts/rye/Rye-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --h1-font-size: 6rem;
+  --h2-font-size: 4rem;
+  --h3-font-size: 1.5rem;
+  --span-font-size: 3.5rem;
+  --input-size: 25rem;
+  --p-size: 2.5rem;
+  --h1-color: #ffffff;
+  --span-color: #ffffff;
+  --button-color: #ffffff;
+  --card-width: 310px;
+  --card-height: 448px;
+  --img-width: 30rem;
+  --BottomOffset: -5px;
+  --LineHeight: 5px;
+  --LineColor: #0f5094;
+  /* --card-width: 370px;
+    --card-height: 518px; */
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --h1-font-size: 5rem;
+    --h2-font-size: 3rem;
+    --h3-font-size: 1.25rem;
+    --span-font-size: 1.5rem;
+    --input-size: 18.75rem;
+    --p-size: 2rem;
+    --img-width: 20rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  :root {
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1rem;
+    --span-font-size: 1.75rem;
+    --input-size: 10.8rem;
+    --p-size: 1.5rem;
+    --img-width: 10rem;
+  }
+}
+
+.container-form{
+  width: 100%;
+}
+
 label {
   font-size: 1.5rem;
   color: #000000;
@@ -35,7 +101,7 @@ legend img {
 }
 
 .wrapper {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -50,7 +116,7 @@ fieldset {
 }
 
 .formulario {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
