@@ -1,3 +1,8 @@
+:root{
+  --card-width: 310px;
+  --card-height: 448px;
+}
+
 /*Cards*/
 
 .container-personajes {
@@ -75,7 +80,7 @@ hr {
   width: var(--card-width);
   height: var(--card-height);
   transform: rotateY(180deg);
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   font-family: "Pirata One", system-ui;
   display: flex;
   flex-direction: column;
@@ -125,7 +130,8 @@ hr {
   margin-top: 0;
 }
 
-.card .back::-webkit-scrollbar {
+/*Estilos Scroll*/
+/* .card .back::-webkit-scrollbar {
   width: 0;
 }
 
@@ -135,7 +141,7 @@ hr {
 
 .card .back::-webkit-scrollbar-thumb {
   background-color: transparent;
-}
+} */
 
 .luffy .front {
   background: url(../assets/imgs/luffyWanted.jpg);
@@ -401,5 +407,27 @@ hr {
 
   .cardBox:last-child {
     margin-bottom: 3%;
+  }
+}
+
+/*Responsividad para Galaxy Fold o dispositivos hasta 280px*/
+@media screen and (max-width: 280px){
+
+  :root{
+    --card-width: 230px;
+    --card-height: 330px;
+  }
+
+  .back img{
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .back p{
+    font-size: 1.1rem;
+  }
+
+  .info-btn{
+    font-size: 1.2rem;
   }
 }

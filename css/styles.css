@@ -18,6 +18,7 @@
 
 :root {
   --h1-font-size: 6rem;
+  --h1-logo-font-size: 2.5rem;
   --h2-font-size: 4rem;
   --h3-font-size: 1.5rem;
   --span-font-size: 3.5rem;
@@ -32,26 +33,25 @@
   --BottomOffset: -5px;
   --LineHeight: 5px;
   --LineColor: #0f5094;
+  --video-min-width: 350px;
+  --author-p-size: 1.5rem;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   :root {
     --h2-font-size: 3rem;
-    --p-size: 1.75rem;
+    --p-size: 2rem;
   }
 
-  .content{
+  .content {
     width: 100%;
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 950px) {
   :root {
-    --h2-font-size: 2.5rem;
-    --p-size: 1.25rem;
-  }
-  .content{
-    width: 100%;
+    --h2-font-size: 3.5rem;
+    --p-size: 1.5rem;
   }
 }
 
@@ -64,28 +64,45 @@
     --input-size: 18.75rem;
     --p-size: 1.25rem;
     --img-width: 20rem;
+    --author-p-size: 1rem;
   }
-  .content{
+  .content {
     width: 100%;
   }
 
-  .video-container{
+  .video-container {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 400px){
+  :root{
+    --h1-logo-font-size: 1.5rem;
+  }
+
+
 }
 
 @media screen and (max-width: 280px) {
   :root {
     --h1-font-size: 2.5rem;
-    --h2-font-size: 1.75rem;
+    --h1-logo-font-size: 1rem;
+    --h2-font-size: 1.6rem;
     --h3-font-size: 1rem;
     --span-font-size: 1.75rem;
     --input-size: 10.8rem;
-    --p-size: 1.5rem;
+    --p-size: 1rem;
     --img-width: 10rem;
+    --video-min-width: 250px;
+    --author-p-size: .7rem;
   }
-  .content{
+  .content {
     width: 100%;
+  }
+
+  .header-logo img{
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -117,6 +134,10 @@ header {
   font-family: "Rye", serif;
 }
 
+.header-logo h1{
+  font-size: var(--h1-logo-font-size);
+}
+
 .logo {
   max-width: 5rem;
   max-height: 5rem;
@@ -124,7 +145,7 @@ header {
   cursor: pointer;
 }
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.1);
 }
 
@@ -160,10 +181,9 @@ header {
 
 .nav-list li a:hover {
   /*Cambiar el color a amarillo con una transicion de medio segundo*/
-  color: 	#a90000;
+  color: #a90000;
   transition: 0.5s;
-
-} 
+}
 
 .nav-list li a:hover:before {
   bottom: var(--BottomOffset);
@@ -175,7 +195,7 @@ header {
   display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .abrir-menu,
   .cerrar-menu {
     display: block;
@@ -350,7 +370,7 @@ header {
 video {
   width: 100%;
   height: 100%;
-  min-width: 350px;
+  min-width: var(--video-min-width);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   outline: none;
@@ -400,7 +420,7 @@ footer li {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  padding: 0 2rem .5rem 2rem;
+  padding: 0 2rem 0.5rem 2rem;
   gap: 2rem;
 }
 
@@ -429,37 +449,57 @@ footer a {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.footer-author img{
+.footer-author img {
   width: 25px;
   height: 25px;
 }
 
-.social{
+.social {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1.75rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
-.social img{
+.social img {
   width: 40px;
   height: 40px;
-  padding: .3rem;
+  padding: 0.3rem;
   background-color: #ffffff;
   border-radius: 30%;
 }
 
-.social img:hover{
+.social img:hover {
   transform: scale(1.1);
 }
 
-.author{
+.author {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.author p {
+  font-size: var(--author-p-size);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 280px) {
+  .footer-sections {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 0;
+  }
+
+  .footer-servicios h3{
+    font-size: 1rem;
+  }
+  .footer-servicios p{
+    font-size: 0.75rem;
+  }
 }
 
 /*------------------------------------ Errores ------------------------------------*/
