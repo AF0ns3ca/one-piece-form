@@ -35,6 +35,7 @@
   --LineColor: #0f5094;
   --video-min-width: 350px;
   --author-p-size: 1.5rem;
+  --error-font-size: 1rem;
 }
 
 @media screen and (max-width: 1440px) {
@@ -95,6 +96,7 @@
     --img-width: 10rem;
     --video-min-width: 250px;
     --author-p-size: .7rem;
+    --error-font-size: .6rem;
   }
   .content {
     width: 100%;
@@ -505,6 +507,7 @@ footer a {
 /*------------------------------------ Errores ------------------------------------*/
 .error {
   color: red;
-  font-size: 1rem;
+  font-size: var(--error-font-size);
   font-family: "Pirata One", system-ui;
+  padding: .5rem;
 }
