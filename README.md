@@ -1,7 +1,5 @@
 # Tarea Evaluable Tema 5 DWEC - DIW
 
-![Logo o Imagen Representativa](enlace-a-la-imagen.png)
-
 ## Autor
 
 - **Nombre del Autor:** Alvaro Fonseca Hernández<!-- - **Correo Electrónico:** tu.email@example.com -->
